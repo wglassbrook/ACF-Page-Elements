@@ -1,0 +1,718 @@
+/* Custom defined variables */
+
+@white       : #FFFFFF;
+@ghost       : #FAFAFA;
+@snow        : #F9F9F9;
+@vapor       : #F6F6F6;
+@white-smoke : #F5F5F5;
+@silver      : #EFEFEF;
+@smoke       : #EEEEEE;
+@gainsboro   : #DDDDDD;
+@iron        : #CCCCCC;
+@base        : #AAAAAA;
+@aluminum    : #999999;
+@jumbo       : #888888;
+@monsoon     : #777777;
+@steel       : #666666;
+@charcoal    : #555555;
+@tuatara     : #444444;
+@oil         : #333333;
+@jet         : #222222;
+@black       : #000000;
+
+// Color palette presets
+
+@palette-01:#5C8727; // Green
+@palette-02:#D35F36; // Orange
+@palette-03:#4680B1; // DrkBlue
+@palette-04:#85B0D4; // LtBlue
+@palette-05:#C54444; // Red
+@palette-06:#FFBF00; // Yellow
+
+// We use these as default colors throughout
+
+@default-color: @iron;
+@primary-color: @palette-03;
+@success-color: @palette-01;
+@info-color: @palette-04;
+@caution-color: @palette-06;
+@warning-color: @palette-02;
+@danger-color: @palette-05;
+
+.text-success{
+	color:@success-color;
+}
+
+.text-warning{
+	color:@warning-color;
+}
+
+.p-element{
+
+	margin:25px 0 0 0;
+	padding:0px;
+	a {
+		.thumb-title{
+			text-indent:0;
+			color:#333333;
+			text-decotation:none;
+			font-size:0.6em;
+		}
+	}
+
+	&.additional-content{
+		.p-title{
+			margin-top:0px;
+		}
+		margin-bottom:10px;
+		.panel{
+			color:#333333!important;
+			margin-top:20px;
+			p{
+				color:#333333!important;
+			}
+			.panel-heading{
+				h2{
+					color:#fff!important;
+				}
+			}
+		}
+	}
+
+	&.blocks-element{
+		margin-bottom:20px;
+		a{
+			text-decoration: none;
+		}
+		.blocks{
+			margin-bottom:25px;
+		}
+		.image_block{
+			background-size:cover;
+			min-height:180px;
+			.block_content,.block_link_box{
+					opacity:0;
+				}
+			.fader{
+				position:absolute;
+				top:0;
+				bottom:0;
+				left:15px;
+				right:15px;
+				z-index: 1;
+				opacity:0.85;
+				transition: all 0.5s ease-in-out;
+				background-color:#ffffff;
+				@media only screen and (min-width : 997px){
+					opacity:0;
+					top:0;
+				}
+			}
+			&:hover{
+				.fader{
+					opacity:0.95;
+				}
+				.block_content,.block_link_box{
+					opacity:1;
+				}
+			}
+			.block_content{
+				position:relative;
+				transition: all 0.5s ease-in-out;
+				z-index: 5;
+				padding:10px;
+				color:#333!important;
+				opacity:1;
+				p{
+					color:#333!important;
+				}
+				h3{
+					margin:0 0 10px 0;
+					padding:0px;
+					color:#333!important;
+				}
+				@media only screen and (min-width : 997px){
+					opacity:0;
+				}
+			}
+			.block_link_box{
+				position:relative;
+				z-index:2;
+				text-align: right;
+				padding:0 10px 10px;
+				a{
+					color:@palette-02;
+				}
+			}
+		}
+		.description_block{
+			.block_title{
+				margin-top:0px;
+				font-size: 20px;
+				@media only screen and (min-width : 768px){
+					font-size:30px;
+				}
+				font-family: 'Roboto Slab', serif;
+				font-weight:bold;
+			}
+		}
+		&.prime_blocks{
+			text-align:center;
+		}
+		&.no-margin{
+			//padding:0px;
+			//margin:0px;
+			.row{
+				margin:0px 0px;
+			}
+			.blocks{
+				@media only screen and (min-width : 997px){
+					.fader{
+						left:0px;
+						right:0px;
+					}
+					margin-bottom:0px;
+					padding:0px;
+				}
+			}
+		}
+	}
+
+	&.buttons-element{
+		&:after{
+			content:'';
+			display:block;
+			clear: both;
+		}
+		margin-bottom:15px;
+		.button{
+			text-align:center;
+			margin-bottom:10px;
+		}
+	}
+
+	&.columns-element{
+		margin-bottom:0px;
+		.col_content{
+			h3{
+				margin-top:0px;
+			}
+			.column{
+				margin-bottom:10px;
+			}
+		}
+	}
+
+	&.doclist-element{
+		.document-row{
+			a h3{
+				line-height:0px;
+				margin:0px;
+				padding:0px;
+				vertical-align: baseline;
+				&:before{
+					font: normal normal normal 14px/1 FontAwesome;
+					font-size: 1.4em;
+					padding-right: 10px;
+					vertical-align: baseline;
+					content: "\f0f6"; // fa-file-text-o
+				}
+			}
+			a[href$=".pdf"] h3{
+				&:before{
+					content: "\f1c1";
+				}
+			}
+			a[href$=".doc"] h3{
+				&:before{
+					content: "\f1c2";
+				}
+			}
+			a[href$=".docx"] h3{
+				&:before{
+					content: "\f1c2";
+				}
+			}
+			a[href$=".xls"] h3{
+				&:before{
+					content: "\f1c3";
+				}
+			}
+			a[href$=".xlsx"] h3{
+				&:before{
+					content: "\f1c3";
+				}
+			}
+			a[href$=".zip"] h3{
+				&:before{
+					content: "\f1c6";
+				}
+			}
+			a[href$=".rar"] h3{
+				&:before{
+					content: "\f1c6";
+				}
+			}
+			a[href$=".7z"] h3{
+				&:before{
+					content: "\f1c6";
+				}
+			}
+		}
+		&:after{
+			content:'';
+			display:block;
+			clear: both;
+		}
+	}
+
+	&.faq-list{
+		.panel-group{
+			margin-bottom:25px;
+		}
+	}
+	&.featured-content{
+		h3{
+			color:inherit;
+			margin:0 0 25px 0;
+			padding:0px;
+		}
+
+		.featured-inner{
+			padding:15px 0;
+			@media only screen and (min-width : 768px){
+				padding:40px 0px;
+			}
+			h3{
+				margin-top: 0px;
+			}
+		}
+
+		.f-image{
+			position:relative;
+			margin-bottom:15px;
+			text-align:center;
+			@media only screen and (min-width : 768px){
+				text-align:left;
+			}
+		}
+		.col-sm-push-8.f-image{
+			text-align:center;
+			@media only screen and (min-width : 768px){
+				text-align:right;
+			}
+		}
+		.readmore{
+			text-align:center;
+			@media only screen and (min-width : 768px){
+				text-align:right;
+			}
+		}
+
+		margin:25px 0;
+	}
+
+	&.gallery-element{
+		&:after{
+			content:'';
+			display:block;
+			clear: both;
+		}
+		.modal-dialog {}
+		.thumbnail {margin-bottom:6px;}
+
+		.carousel-control.left,.carousel-control.right{
+		  background-image:none;
+		}
+		.image-set{
+			margin-bottom:10px;
+		}
+		.gallery-item{
+			margin-bottom:15px;
+		}
+
+		.gallery-image.col-xs-6.col-md-6{ // Two Columns
+			&:nth-child(2n+3){
+				clear:both;
+			}
+		}
+		.gallery-image.col-xs-6.col-md-4{ // Three Columns
+			@media only screen and (max-width : 991px) {
+				&:nth-child(2n+3){
+					clear:both;
+				}
+			}
+			@media only screen and (min-width : 992px) {
+				&:nth-child(3n+4){
+					clear:both;
+				}
+			}
+		}
+		.gallery-image.col-xs-6.col-md-3{ // Four Columns
+			@media only screen and (max-width : 991px) {
+				&:nth-child(2n+3){
+					clear:both;
+				}
+			}
+			@media only screen and (min-width : 992px) {
+				&:nth-child(4n+5){
+					clear:both;
+				}
+			}
+		}
+		.gallery-image.col-xs-6.col-sm-4.col-md-2{ // Six Columns
+			@media only screen and (max-width : 767px) {
+				&:nth-child(2n+1){
+					clear:both;
+				}
+			}
+			@media only screen and (min-width : 768px) and (max-width : 992px) {
+				&:nth-child(3n+4){
+					clear:both;
+				}
+			}
+			@media only screen and (min-width : 992px) {
+				&:nth-child(6n+7){
+					clear:both;
+				}
+			}
+		}
+	}
+
+	&.map-element{
+		margin-top:0px;
+		&:after{
+			content:'';
+			display:block;
+			clear: both;
+		}
+		margin-bottom:15px;
+
+		.acf-map img {
+			max-width:none;
+		}
+	}
+
+}
+
+.services-title{
+	a{
+		color:@caution-color;
+		&:hover{
+			color:@white;
+		}
+	}
+}
+
+.our-work-header{
+	h1{
+		text-transform: uppercase;
+		font-family: 'Roboto Slab', serif;
+		padding-bottom:25px;
+		font-weight:bold;
+	}
+}
+
+.inline-headline{
+	text-transform: uppercase;
+	font-family: 'Roboto Slab', serif;
+	font-weight:bold;
+	font-size:2.6em;
+	line-height:1.2em;
+}
+
+.success-color{
+	color:@success-color;
+}
+
+.warning-color{
+	color:@warning-color;
+}
+.featured-cases, .featured-projects{
+	.blocks{
+		.image_block{
+			background-size:cover;
+			min-height:200px;
+			.fader{
+				background-color: @warning-color;
+			}
+			.block_content{
+				padding-top:15px;
+				@media only screen and (min-width : 992px) {
+					padding-top:25px;
+				}
+				h3{
+					border-bottom:1px solid;
+					line-height:1.4em;
+					text-transform: uppercase;
+					color:@white!important;
+					font-size:1.2em;
+					@media only screen and (min-width : 776px) {
+						font-size:1.8em;
+					}
+					@media only screen and (min-width : 992px) {
+						font-size:1.4em;
+					}
+				}
+				p{
+					color:@white!important;
+				}
+			}
+			.block_link_box{
+				display:none;
+			}
+		}
+	}
+}
+.additional-projects{
+	.blocks{
+		.image_block{
+			min-height:200px;
+			.fader{
+				background-color: @success-color;
+			}
+			.block_content{
+				padding-top:15px;
+				@media only screen and (min-width : 992px) {
+					padding-top:25px;
+				}
+				h3{
+					border-bottom:1px solid;
+					line-height:1.4em;
+					text-transform: uppercase;
+					color:@white!important;
+					font-size:1.2em;
+					@media only screen and (min-width : 776px) {
+						font-size:1.8em;
+					}
+					@media only screen and (min-width : 992px) {
+						font-size:1.4em;
+					}
+				}
+				p{
+					color:@white!important;
+				}
+			}
+			.block_link_box{
+				display:none;
+			}
+		}
+	}
+}
+
+
+/*
+ *
+ * Wrapper Styles
+ * 
+ */
+
+.wrap-toppad-none{
+	padding-top:0px;
+}
+.wrap-toppad-xs{
+	padding-top:10px;
+}
+.wrap-toppad-sm{
+	padding-top:20px;
+}
+.wrap-toppad-md{
+	padding-top: 35px;
+}
+.wrap-toppad-lg{
+	padding-top: 65px;
+}
+.wrap-toppad-xl{
+	padding-top: 125px;
+}
+.wrap-bottompad-none{
+	padding-bottom: 0px
+}
+.wrap-bottompad-xs{
+	padding-bottom: 10px
+}
+.wrap-bottompad-sm{
+	padding-bottom: 20px
+}
+.wrap-bottompad-md{
+	padding-bottom: 35px;
+}
+.wrap-bottompad-lg{
+	padding-bottom: 65px;
+}
+.wrap-bottompad-xl{
+	padding-bottom: 125px;
+}
+
+/* Availible styles for adding top and bottom padding to p-elements */
+
+.p-element.nopad,.p-element.no-pad,.p-element.pad-none{
+	padding-top:0px;
+	padding-bottom:0px;
+}
+
+.p-element.pad-xs{
+	padding-top:5px;
+	padding-bottom:5px;
+}
+
+.p-element.pad-sm{
+	padding-top:10px;
+	padding-bottom:10px;
+	@media only screen and (min-width : 767px) {
+		padding-top:20px;
+		padding-bottom:20px;
+	}
+}
+
+.p-element.pad-md{
+	padding-top:15px;
+	padding-bottom:15px;
+	@media only screen and (min-width : 767px) {
+		padding-top:35px;
+		padding-bottom:35px;
+	}
+}
+
+.p-element.pad-lg{
+	padding-top:20px;
+	padding-bottom:20px;
+	@media only screen and (min-width : 767px) {
+		padding-top:65px;
+		padding-bottom:65px;
+	}
+}
+
+.p-element.pad-xl{
+	padding-top:25px;
+	padding-bottom:25px;
+	@media only screen and (min-width : 767px) {
+		padding-top:125px;
+		padding-bottom:125px;
+	}
+}
+
+.p-element.topnopad,.p-element.top-no-pad,.p-element.top-pad-none{
+	padding-top:0px;
+}
+
+.p-element.top-pad-xs{
+	padding-top:5px;
+}
+
+.p-element.top-pad-sm{
+	padding-top:10px;
+	@media only screen and (min-width : 767px) {
+		padding-top:20px;
+	}
+}
+
+.p-element.top-pad-md{
+	padding-top:15px;
+	@media only screen and (min-width : 767px) {
+		padding-top:35px;
+	}
+}
+
+.p-element.top-pad-lg{
+	padding-top:20px;
+	@media only screen and (min-width : 767px) {
+		padding-top:65px;
+	}
+}
+
+.p-element.top-pad-xl{
+	padding-top:25px;
+	@media only screen and (min-width : 767px) {
+		padding-top:125px;
+	}
+}
+
+.p-element.bottomnopad,.p-element.bottom-no-pad,.p-element.bottom-pad-none{
+	padding-bottom:0px;
+}
+
+.p-element.bottom-pad-xs{
+	padding-bottom:5px;
+}
+
+.p-element.bottom-pad-sm{
+	padding-bottom:10px;
+	@media only screen and (min-width : 767px) {
+		padding-bottom:20px;
+	}
+}
+
+.p-element.bottom-pad-md{
+	padding-bottom:15px;
+	@media only screen and (min-width : 767px) {
+		padding-bottom:35px;
+	}
+}
+
+.p-element.bottom-pad-lg{
+	padding-bottom:20px;
+	@media only screen and (min-width : 767px) {
+		padding-bottom:65px;
+	}
+}
+
+.p-element.bottom-pad-xl{
+	padding-bottom:25px;
+	@media only screen and (min-width : 767px) {
+		padding-bottom:125px;
+	}
+}
+
+
+/*
+ *  Column row clears
+ */
+.p-element{
+	.col-xs-6.col-md-6,.two-cols{ // Two Columns
+		&:nth-child(2n+3){
+			clear:both;
+		}
+	}
+	.col-xs-6.col-md-4,.three-cols{ // Three Columns
+		@media only screen and (max-width : 991px) {
+			&:nth-child(2n+3){
+				clear:both;
+			}
+		}
+		@media only screen and (min-width : 992px) {
+			&:nth-child(3n+4){
+				clear:both;
+			}
+		}
+	}
+	.col-xs-6.col-md-3,.four-cols{ // Four Columns
+		@media only screen and (max-width : 991px) {
+			&:nth-child(2n+3){
+				clear:both;
+			}
+		}
+		@media only screen and (min-width : 992px) {
+			&:nth-child(4n+5){
+				clear:both;
+			}
+		}
+	}
+	.col-xs-6.col-sm-4.col-md-2,.six-cols{ // Six Columns
+		@media only screen and (max-width : 767px) {
+			&:nth-child(2n+1){
+				clear:both;
+			}
+		}
+		@media only screen and (min-width : 768px) and (max-width : 992px) {
+			&:nth-child(3n+4){
+				clear:both;
+			}
+		}
+		@media only screen and (min-width : 992px) {
+			&:nth-child(6n+7){
+				clear:both;
+			}
+		}
+	}
+}

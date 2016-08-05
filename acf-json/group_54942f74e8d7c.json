@@ -1,0 +1,160 @@
+{
+    "key": "group_54942f74e8d7c",
+    "title": "Site Options",
+    "fields": [
+        {
+            "key": "field_54a179410b862",
+            "label": "Masthead Logo",
+            "name": "masthead_logo",
+            "type": "image",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "field_type-image field_key-field_54a179410b862 field_type-image field_key-field_54a179410b862 field_type-image field_key-field_54a179410b862",
+                "id": ""
+            },
+            "return_format": "id",
+            "preview_size": "medium",
+            "library": "all",
+            "min_width": 0,
+            "min_height": 0,
+            "min_size": 0,
+            "max_width": 0,
+            "max_height": 0,
+            "max_size": 0,
+            "mime_types": ""
+        },
+        {
+            "key": "field_54c6b23af859f",
+            "label": "Mobile Logo",
+            "name": "mobile_logo",
+            "type": "image",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "field_type-image field_key-field_54c6b23af859f field_type-image field_key-field_54c6b23af859f field_type-image field_key-field_54c6b23af859f",
+                "id": ""
+            },
+            "return_format": "id",
+            "preview_size": "medium",
+            "library": "all",
+            "min_width": 0,
+            "min_height": 0,
+            "min_size": 0,
+            "max_width": 0,
+            "max_height": 0,
+            "max_size": 0,
+            "mime_types": ""
+        },
+        {
+            "key": "field_54fcbb8fcd118",
+            "label": "Colophon Background",
+            "name": "colophon_background",
+            "type": "image",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "field_type-image field_key-field_54fcbb8fcd118 field_type-image field_key-field_54fcbb8fcd118 field_type-image field_key-field_54fcbb8fcd118",
+                "id": ""
+            },
+            "return_format": "id",
+            "preview_size": "medium",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
+        },
+        {
+            "key": "field_54ff054b81c8d",
+            "label": "Colophon Background Color",
+            "name": "colophon_background_color",
+            "type": "color_picker",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "field_type-color_picker field_key-field_54ff054b81c8d field_type-color_picker field_key-field_54ff054b81c8d field_type-color_picker field_key-field_54ff054b81c8d",
+                "id": ""
+            },
+            "default_value": "#333333"
+        },
+        {
+            "key": "field_55521e50c1779",
+            "label": "Colophon Headline Color",
+            "name": "colophon_headline_color",
+            "type": "color_picker",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "field_type-color_picker field_key-field_55521e50c1779 field_type-color_picker field_key-field_55521e50c1779 field_type-color_picker field_key-field_55521e50c1779",
+                "id": ""
+            },
+            "default_value": ""
+        },
+        {
+            "key": "field_55521e6dc177a",
+            "label": "Colophon Text Color",
+            "name": "colophon_text_color",
+            "type": "color_picker",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "field_type-color_picker field_key-field_55521e6dc177a field_type-color_picker field_key-field_55521e6dc177a field_type-color_picker field_key-field_55521e6dc177a",
+                "id": ""
+            },
+            "default_value": ""
+        },
+        {
+            "key": "field_54fcaa8129157",
+            "label": "Footer Copyright",
+            "name": "footer_copyright",
+            "type": "wysiwyg",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "field_type-wysiwyg field_key-field_54fcaa8129157 field_type-wysiwyg field_key-field_54fcaa8129157 field_type-wysiwyg field_key-field_54fcaa8129157",
+                "id": ""
+            },
+            "default_value": "",
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 1
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "site-options"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "local": "php",
+    "modified": 1469462906
+}
